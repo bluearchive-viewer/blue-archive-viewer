@@ -1,14 +1,14 @@
-import NextHeadSeo from "next-head-seo";
-import { config } from "@site.config";
+import { config } from "@site.config"
+import NextHeadSeo from "next-head-seo"
 
 export type MyPageSeoProps = {
-  path: string;
-  title?: string;
-  description?: string;
-  ogImagePath?: string;
-  noindex?: boolean;
-  noTitleTemplate?: boolean;
-};
+  path: string
+  title?: string
+  description?: string
+  ogImagePath?: string
+  noindex?: boolean
+  noTitleTemplate?: boolean
+}
 
 export const MyPageSeo: React.FC<MyPageSeoProps> = (props) => {
   const {
@@ -17,11 +17,11 @@ export const MyPageSeo: React.FC<MyPageSeoProps> = (props) => {
     description = config.siteMeta.description,
     noindex,
     noTitleTemplate,
-  } = props;
+  } = props
 
-  const APP_ROOT_URL = process.env.NEXT_PUBLIC_APP_ROOT_URL;
+  const APP_ROOT_URL = process.env.NEXT_PUBLIC_APP_ROOT_URL
 
-  const pageUrl = APP_ROOT_URL + path;
+  const pageUrl = APP_ROOT_URL + path
 
   return (
     <NextHeadSeo
@@ -40,5 +40,5 @@ export const MyPageSeo: React.FC<MyPageSeoProps> = (props) => {
         card: "summary_large_image",
       }}
     />
-  );
-};
+  )
+}

@@ -1,37 +1,36 @@
-import { useMemo } from "react";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import Link from "next/link";
 import {
-  Newspaper,
-  LibraryMusic,
-  PeopleAlt,
-  EventNote,
-  MoveToInbox,
   AutoStories,
+  EventNote,
   GitHub,
-} from "@mui/icons-material";
+  LibraryMusic,
+  MoveToInbox,
+  Newspaper,
+  PeopleAlt,
+} from "@mui/icons-material"
 import {
+  AppBar as MuiAppBar,
   Box,
   Drawer as MuiDrawer,
-  ListItem,
+  IconButton,
   List,
+  ListItem,
   ListItemIcon,
   ListItemText,
-  IconButton,
-  AppBar as MuiAppBar,
-} from "@mui/material";
-import { styled } from "@mui/material/styles";
-import { config } from "@site.config";
-import type { NextPage } from "next";
-import { MyPageSeo } from "@src/components/MyPageSeo";
+} from "@mui/material"
+import { styled } from "@mui/material/styles"
+import Toolbar from "@mui/material/Toolbar"
+import Typography from "@mui/material/Typography"
+import { config } from "@site.config"
+import { MyPageSeo } from "@src/components/MyPageSeo"
+import type { NextPage } from "next"
+import { useMemo } from "react"
 
-const drawerWidth = 240;
+const drawerWidth = 240
 
 const Page: NextPage = () => {
   const DesktopAppBar = styled(MuiAppBar)(({ theme }) => ({
     width: `calc(100% - ${drawerWidth}px)`,
-  }));
+  }))
 
   const Root = useMemo(
     () =>
@@ -47,8 +46,8 @@ const Page: NextPage = () => {
         width: "100%",
         display: "flex",
       })),
-    []
-  );
+    [],
+  )
 
   const Drawer = styled(MuiDrawer)(({ theme }) => ({
     boxSizing: "border-box",
@@ -58,15 +57,11 @@ const Page: NextPage = () => {
     "& .MuiDrawer-paper": {
       width: drawerWidth,
     },
-  }));
+  }))
 
   return (
     <>
-      <MyPageSeo
-        title={config.siteMeta.title}
-        noTitleTemplate={true}
-        path="/"
-      />
+      <MyPageSeo title={config.siteMeta.title} noTitleTemplate={true} path="/" />
       <Root>
         <DesktopAppBar position="fixed">
           <Toolbar>
@@ -126,6 +121,6 @@ const Page: NextPage = () => {
         </Drawer>
       </Root>
     </>
-  );
-};
-export default Page;
+  )
+}
+export default Page

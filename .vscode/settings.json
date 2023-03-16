@@ -2,7 +2,11 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "css.lint.unknownAtRules": "ignore",
-  "editor.codeActionsOnSave": ["source.fixAll.eslint"],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true,
+    "source.addMissingImports": true
+  },
   "editor.quickSuggestions": {
     "strings": "on"
   }
