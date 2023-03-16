@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
+import Link from "next/link";
 import {
   Newspaper,
   LibraryMusic,
@@ -8,6 +9,7 @@ import {
   EventNote,
   MoveToInbox,
   AutoStories,
+  GitHub,
 } from "@mui/icons-material";
 import {
   Box,
@@ -16,6 +18,7 @@ import {
   List,
   ListItemIcon,
   ListItemText,
+  IconButton,
   AppBar as MuiAppBar,
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
@@ -70,6 +73,15 @@ const Page: NextPage = () => {
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               {config.siteMeta.title}
             </Typography>
+            <a href="https://github.com/bluearchive-viewer/blue-archive-viewer">
+              <IconButton
+                color="inherit"
+                style={{ padding: ".6rem", color: "white" }}
+                size="medium"
+              >
+                <GitHub fontSize="inherit" />
+              </IconButton>
+            </a>
           </Toolbar>
         </DesktopAppBar>
         <Drawer variant="permanent">
