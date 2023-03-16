@@ -68,7 +68,7 @@ const Page: NextPage = () => {
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               {config.siteMeta.title}
             </Typography>
-            <a href="https://github.com/bluearchive-viewer/blue-archive-viewer">
+            <a href={config.siteMeta.repository}>
               <IconButton
                 color="inherit"
                 style={{ padding: ".6rem", color: "white" }}
